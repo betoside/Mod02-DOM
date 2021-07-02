@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-Manipulando-Atributos.html</title>
+</head>
+<body>
+
+    <img src="/prancha.png" alt="" data-assunto="prancha" class="imagem" height="250">
+
+    <br><br>
+
+    <button onclick="trocarImagem('prancha', 'equipamento')">prancha</button>
+    <button onclick="trocarImagem('zoomp', 'brand')">zoomp</button>
+
+    <script>
+        function trocarImagem(nomeImg, assunto) {
+            document.querySelector('.imagem').setAttribute('src', nomeImg+'.png');
+            document.querySelector('.imagem').setAttribute('data-assunto', assunto);
+            console.log('clicou em ', nomeImg+'.png');
+        }
+        // trocarImagem('prancha');
+        // trocarImagem('zoomp');
+        function pegarAtributo() {
+            let atributo = document.querySelector('imagem')
+        }
+    </script>
+    <pre>
+
+        function trocarImagem(nomeImg, assunto) {
+            document.querySelector('.imagem').setAttribute('src', nomeImg+'.png');
+            document.querySelector('.imagem').setAttribute('data-assunto', assunto);
+            console.log('clicou em ', nomeImg+'.png');
+        }
+        // trocarImagem('prancha');
+        // trocarImagem('zoomp');
+        function pegarAtributo() {
+            let atributo = document.querySelector('imagem')
+        }
+    
+    </pre>
+</body>
+</html>

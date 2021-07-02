@@ -1,0 +1,39 @@
+
+Módulo 2: DOM
+    Mod02-DOM
+
+01: O que é DOM
+    
+    Document Object Model
+
+02: Selecionando Elementos (4 funções) 1
+03: Selecionando Elementos (4 funções) 2
+    
+    03-Selecionando-Elementos-1e2.html
+
+04: Selecionando com querySelector
+
+05: Manipulando Class do elemento 1
+06: Manipulando Class do elemento 2
+    
+    06-Manipulando-Class.html
+
+07: Tipos de dados
+
+    tipos de objetos que existem no javascript
+    07-Tipos-de-dados.html
+
+08: Comentários
+09: Funções (1/2)
+10: Funções (2/2)
+11: Manipulando Atributos
+    
+    11-Manipulando-Atributos.html
+    prancha.png
+    zoomp.png
+
+12: Dimensões
+    12-Dimensoes.html
+
+13: Distâncias e Scroll Suave
+14: Resposta do Exercício Scroll

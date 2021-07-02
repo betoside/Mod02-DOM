@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06-Manipulando-Class.html</title>
+</head>
+<body>
+    <style>
+        #exemplo { border: 1px solid #ccc; padding: 50px; }
+        .verde { background-color: #0f0; }
+        .vermelho { background-color: #f00; color: #fff; }
+        .azul { background-color: #00f; }
+        .preto { background-color: #000; color: #fff; }
+    </style>
+
+    <div id="exemplo">colorir</div>
+    <br><br>
+    <button id="verde" onclick="verde()">verde</button>
+    <button id="vermelho" onclick="vermelho()">vermelho</button>
+    <button id="azul" onclick="azul()">azul</button>
+
+    <button class="btnAlternar" onclick="btnAlternar()">Alternar</button>
+
+    <script>
+
+        function btnAlternar() {
+            let btn = document.querySelector('.btnAlternar');
+            if (btn.classList.contains('preto')) {
+                btn.classList.remove('preto');
+                btn.classList.add('vermelho');
+            } else {
+                btn.classList.remove('vermelho');
+                btn.classList.add('preto');
+            }
+        }
+        btnAlternar();
+
+        function verde() {
+            document.querySelector('#exemplo').classList.remove('vermelho');
+            document.querySelector('#exemplo').classList.remove('azul');
+            document.querySelector('#exemplo').classList.add('verde');
+        }
+        function vermelho() {
+            document.querySelector('#exemplo').classList.remove('verde');
+            document.querySelector('#exemplo').classList.remove('azul');
+            document.querySelector('#exemplo').classList.add('vermelho');
+        }
+        function azul() {
+            document.querySelector('#exemplo').classList.remove('verde');
+            document.querySelector('#exemplo').classList.remove('vermelho');
+            document.querySelector('#exemplo').classList.add('azul');
+        }
+        // document.querySelector('#verde').click();
+        // document.querySelector('#vermelho').click();
+        // document.querySelector('#azul').click();
+    </script>
+
+    <pre>
+
+
+        function btnAlternar() {
+            let btn = document.querySelector('.btnAlternar');
+            if (btn.classList.contains('preto')) {
+                btn.classList.remove('preto');
+                btn.classList.add('vermelho');
+            } else {
+                btn.classList.remove('vermelho');
+                btn.classList.add('preto');
+            }
+        }
+        btnAlternar();
+
+        function verde() {
+            document.querySelector('#exemplo').classList.remove('vermelho');
+            document.querySelector('#exemplo').classList.remove('azul');
+            document.querySelector('#exemplo').classList.add('verde');
+        }
+        function vermelho() {
+            document.querySelector('#exemplo').classList.remove('verde');
+            document.querySelector('#exemplo').classList.remove('azul');
+            document.querySelector('#exemplo').classList.add('vermelho');
+        }
+        function azul() {
+            document.querySelector('#exemplo').classList.remove('verde');
+            document.querySelector('#exemplo').classList.remove('vermelho');
+            document.querySelector('#exemplo').classList.add('azul');
+        }
+        // document.querySelector('#verde').click();
+        // document.querySelector('#vermelho').click();
+        // document.querySelector('#azul').click();
+    
+    </pre>
+    
+</body>
+</html>

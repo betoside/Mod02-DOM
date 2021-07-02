@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12-Dimensoes.html</title>
+</head>
+<body>
+    <style>
+        .texto { 
+            width: 200px; height: 300px; overflow-y:scroll; padding: 20px; 
+            border: 1px solid #000; background: #ccc;
+
+        }
+    </style>
+    <div class="texto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quis minima labore fuga non quidem necessitatibus quas consequatur, libero nostrum ducimus id atque neque animi amet provident nam, porro voluptas.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quis minima labore fuga non quidem necessitatibus quas consequatur, libero nostrum ducimus id atque neque animi amet provident nam, porro voluptas.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quis minima labore fuga non quidem necessitatibus quas consequatur, libero nostrum ducimus id atque neque animi amet provident nam, porro voluptas.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quis minima labore fuga non quidem necessitatibus quas consequatur, libero nostrum ducimus id atque neque animi amet provident nam, porro voluptas.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quis minima labore fuga non quidem necessitatibus quas consequatur, libero nostrum ducimus id atque neque animi amet provident nam, porro voluptas.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quis minima labore fuga non quidem necessitatibus quas consequatur, libero nostrum ducimus id atque neque animi amet provident nam, porro voluptas.
+    </div>
+    <div class="alturaGrande">
+        <style>
+            .alturaGrande { 
+                background: #ccc; 
+                height: 1500px;
+                width: 550px;
+                border: 1px solid #000;
+            }
+        </style>
+
+        <pre>
+
+            let oTexto = document.querySelector('.texto');
+            console.log('oTexto.offsetHeight', oTexto.offsetHeight);
+            console.log('oTexto.offsetWidth', oTexto.offsetWidth);
+            console.log('oTexto.clientHeight', oTexto.clientHeight); // nao considera a borda
+            console.log('oTexto.clientWidth', oTexto.clientWidth);
+            console.log('oTexto.scrollHeight', oTexto.scrollHeight);
+            console.log('oTexto.scrollWidth', oTexto.scrollWidth);
+            console.log('oTexto.scrollTop', oTexto.scrollTop);
+            console.log('oTexto.scrollY', oTexto.scrollY);
+            console.log('oTexto.scrollTo(0, 100)');
+            oTexto.scrollTo(0, 100);
+            window.scrollTo(0, 0);
+            console.log('window.scrollY');
+
+        </pre>
+
+        <pre>
+
+            function subirTela() {
+                window.scrollTo({
+                    top: 0,
+                    left: 0, 
+                    behavior: 'smooth'
+                });
+                console.log('clicou subir tela');
+            } 
+            function checkPosicaoTela(){
+                let botao = document.querySelector('.scrollButton');
+                if(window.scrollY === 0) {
+                    // ocultar botao
+                    botao.style.display = "none";
+                } else {
+                    botao.style.display = "flex";
+                }
+                console.log('checando');
+            }
+            // checkPosicaoTela();
+            // setInterval(checkPosicaoTela, 1000);
+            window.addEventListener('scroll', checkPosicaoTela);
+        
+        </pre>
+    </div>
+    <script>
+        let oTexto = document.querySelector('.texto');
+        console.log('oTexto.offsetHeight', oTexto.offsetHeight);
+        console.log('oTexto.offsetWidth', oTexto.offsetWidth);
+        console.log('oTexto.clientHeight', oTexto.clientHeight); // nao considera a borda
+        console.log('oTexto.clientWidth', oTexto.clientWidth);
+        console.log('oTexto.scrollHeight', oTexto.scrollHeight);
+        console.log('oTexto.scrollWidth', oTexto.scrollWidth);
+        console.log('oTexto.scrollTop', oTexto.scrollTop);
+        console.log('oTexto.scrollY', oTexto.scrollY);
+        console.log('oTexto.scrollTo(0, 100)');
+        oTexto.scrollTo(0, 100);
+        window.scrollTo(0, 0);
+        console.log('window.scrollY');
+    </script>
+    <div class="scrollButton" onclick="subirTela()">
+        <script>
+            function subirTela() {
+                window.scrollTo({
+                    top: 0,
+                    left: 0, 
+                    behavior: 'smooth'
+                });
+                console.log('clicou subir tela');
+            } 
+            function checkPosicaoTela(){
+                let botao = document.querySelector('.scrollButton');
+                if(window.scrollY === 0) {
+                    // ocultar botao
+                    botao.style.display = "none";
+                } else {
+                    botao.style.display = "flex";
+                }
+                console.log('checando');
+            }
+            // checkPosicaoTela();
+            // setInterval(checkPosicaoTela, 1000);
+            window.addEventListener('scroll', checkPosicaoTela);
+        </script>
+        <style>
+            .scrollButton {
+                width: 45px;height: 45px;border-radius: 15px;
+                background: #f00;
+                position: fixed; right: 20px; bottom: 20px;
+                cursor: pointer;
+                display: flex; justify-content: center; align-items: center;
+                font-weight: bold;font-family:sans-serif; text-transform: uppercase;
+            }
+        </style>
+        top
+    </div>
+
+</body>
+</html>

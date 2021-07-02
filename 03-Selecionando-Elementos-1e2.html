@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionando Elementos (4 funções)</title>
+</head>
+<body>
+
+    <p>
+        Existem 4 comando distintos para usar para 
+        selecionar elementos na tela
+    </p>
+
+    <div id="exemplo">Div "Exemplo"</div>
+
+    <div class="lista">
+        Lista: arroz, feijão, frango
+    </div>
+    <div class="lista">
+        Lista: laranja, banana, maçã
+    </div>
+
+    <div>
+        <button>Go</button>
+        <input type="text" name="busca">
+    </div>
+
+    <script>
+
+        let q = document.getElementById('exemplo');
+        console.log(q);
+        console.log("-".repeat(9));
+        q.innerHTML = "Carlos Arthur João + <button>clicar</button>";
+        console.log("-".repeat(9));
+
+        let divLista = document.getElementsByClassName('lista');
+        console.log(divLista.length);
+        console.log(divLista[0]);
+        console.log(divLista[1]);
+        console.log("-".repeat(9));
+
+        let botoes = document.getElementsByTagName('button');
+        console.log(botoes.length, botoes);
+        console.log("-".repeat(9));
+
+        let campoBusca = document.getElementsByName('busca');
+        campoBusca[0].value = "Digite alguma palavra";
+        console.log(".getElementsByName('busca'); "+campoBusca.length, campoBusca);
+        console.log("-".repeat(9));
+
+        let obj01 = document.querySelector('#exemplo');
+        console.log("document.querySelector:", obj01);
+        console.log("sempre retorna o primeiro que encontrar");
+        console.log("-".repeat(9));
+
+        let obj03 = document.querySelectorAll('button');
+        console.log("document.querySelectorAll('button')", obj03);
+        console.log(obj03[0]);
+        console.log(obj03[1]);
+        console.log("-".repeat(9));
+
+
+    </script>
+
+    <pre>
+
+
+        let q = document.getElementById('exemplo');
+        console.log(q);
+        console.log("-".repeat(9));
+        q.innerHTML = "Carlos Arthur João + <button>clicar</button>";
+        console.log("-".repeat(9));
+
+        let divLista = document.getElementsByClassName('lista');
+        console.log(divLista.length);
+        console.log(divLista[0]);
+        console.log(divLista[1]);
+        console.log("-".repeat(9));
+
+        let botoes = document.getElementsByTagName('button');
+        console.log(botoes.length, botoes);
+        console.log("-".repeat(9));
+
+        let campoBusca = document.getElementsByName('busca');
+        campoBusca[0].value = "Digite alguma palavra";
+        console.log(".getElementsByName('busca'); "+campoBusca.length, campoBusca);
+        console.log("-".repeat(9));
+
+        let obj01 = document.querySelector('#exemplo');
+        console.log("document.querySelector:", obj01);
+        console.log("sempre retorna o primeiro que encontrar");
+        console.log("-".repeat(9));
+
+        let obj03 = document.querySelectorAll('button');
+        console.log("document.querySelectorAll('button')", obj03);
+        console.log(obj03[0]);
+        console.log(obj03[1]);
+        console.log("-".repeat(9));
+
+
+    
+    </pre>
+</body>
+</html>
